@@ -26,7 +26,7 @@ public class C01_Xpath {
 
         // sonuc sayısını yazdırın
         WebElement sonuc = driver.findElement(By.xpath("//*[text()='14 results for']"));
-        System.out.println(sonuc.getText());    //14 results for
+        System.out.println("Sonucumuz =" + sonuc.getText());    //14 results for
         String[] arr = sonuc.getText().split(" ");
         System.out.println("Sonuc Sayisi = " + arr[0]);
 
