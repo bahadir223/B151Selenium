@@ -27,16 +27,26 @@ public class C02_WebelementLocator {
         List<WebElement> sonucYazisi = driver.findElements(By.className("sg-col-inner"));
         System.out.println(sonucYazisi.get(0).getText());//1-16 of 155 results for "city bike"
 
+        System.out.println("xpath ile yazdırdımmmmmmmmmmm!!!!!");
         //Xpath ile list kullanmadan tek seferde locate aldık
         WebElement sonucYazisiXpath = driver.findElement(By.xpath("(//div[@class='sg-col-inner'])[1]"));
+        System.out.println(sonucYazisiXpath.getText());
+
+        System.out.println("xpath ile sonuç sayısı yazdırdık...");
+        // sonuc sayısını yazdırın
+        String a = sonucYazisiXpath.getText();
+        String[] arr = a.split(" ");
+        System.out.println(arr[2]);
 
         // sonuc sayısını yazdırın
         String[] sonucSayisi = sonucYazisi.get(0).getText().split(" ");
         System.out.println("Sonuc Sayisi = " + sonucSayisi[2]);
 
         //Sayfadaki 12. elementi list kullanmadan xpath'in index özelliğini kullanarak locate aldık
+
         WebElement onikinciElement = driver.findElement(By.xpath("(//*[@class='sg-col-inner'])[12]"));
         System.out.println(onikinciElement.getText());
+
 
         // ilk ürünün locatini alın
         List<WebElement> urunler = driver.findElements(By.className("s-image"));
@@ -83,6 +93,15 @@ public class C02_WebelementLocator {
     //Carrer Opportunities In QA linkine tıklayalım
     //Başlığın Opportunities içerdiğini test edelim
     //Tekrar anasayfaya dönelim ve url'in https://techproeducation.com/ olduğunu doğrulayalım
+
+    //https://id.heroku.com/login sayfasina gidin
+//Bir mail adersi giriniz
+//Bir password giriniz
+//Login butonuna tiklayiniz
+//"There was a problem with your login." texti gorunur ise
+//"kayit yapilamadi" yazdiriniz
+//eger yazi gorunur degilse "kayit yapildi" yazdiriniz
+//sayfayı kapatiniz
 
 
 }
